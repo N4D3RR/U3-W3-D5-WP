@@ -86,15 +86,10 @@ const EpisodesSection = () => {
     <section className="mb-4">
       <h4 className="fw-semibold mb-2">Nuovi episodi radio</h4>
 
-      <Row className="g-3">
+      <Row className="g-3 row-cols-3 row-cols-md-4 row-cols-lg-5 ">
         {episodeTitles.map((title, index) => (
-          <Col
-            xs={4}
-            md={2}
-            key={index}
-            className={index > 2 ? "d-none d-md-block" : ""}
-          >
-            <Card className="bg-dark border-0 text-light h-100">
+          <Col key={index} className={index > 2 ? "d-none d-md-block" : ""}>
+            <Card className="bg-transparent border-0 text-light h-100">
               <Card.Img src={imageList[index]} alt={title} />
 
               <Card.Body className="px-1">

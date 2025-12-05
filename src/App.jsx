@@ -1,4 +1,5 @@
 import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap-icons/font/bootstrap-icons.css"
 
 import { Provider } from "react-redux"
 import ExploreSection from "./components/ExploreSection"
@@ -11,6 +12,7 @@ import EpisodesSection from "./components/EpisodesSection"
 import NewReleasesSection from "./components/NewReleasesSection"
 import { Col, Container, Row } from "react-bootstrap"
 import TopbarDesktop from "./components/TopbarDesktop"
+import MyFooter from "./components/MyFooter"
 
 function App() {
   return (
@@ -29,15 +31,23 @@ function App() {
                 <Sidebar />
               </Col>
 
-              <Col xs={12} md={9} lg={10} className="pt-3 pb-4">
-                <TopbarDesktop />
-                <h2 className="fw-bold mb-3 px-3">Novità</h2>
+              <Col
+                xs={12}
+                md={9}
+                lg={10}
+                className="pb-4 px-0"
+                style={{ backgroundColor: "#202020" }}
+              >
+                <TopbarDesktop style={{ backgroundColor: "#2A2A2A" }} />
+                <h2 className="fw-bold my-3 px-3">Novità</h2>
+                <hr className="mx-3" />
 
                 <Container className="px-2 px-md-3">
                   <HeroRadioSection />
                   <EpisodesSection />
                   <NewReleasesSection />
                   <ExploreSection />
+                  <MyFooter />
                 </Container>
               </Col>
             </Row>

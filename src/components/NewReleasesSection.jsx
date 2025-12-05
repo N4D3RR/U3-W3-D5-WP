@@ -8,7 +8,7 @@ const NewReleasesSection = () => {
   const [err, setErr] = useState(false)
 
   useEffect(() => {
-    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=queen")
+    fetch("https://striveschool-api.herokuapp.com/api/deezer/search?q=salmo")
       .then((res) => {
         if (res.ok) {
           return res.json()
@@ -38,8 +38,13 @@ const NewReleasesSection = () => {
 
       {!loading && !err && (
         <Row className="g-3">
-          {tracks.slice(0, 12).map((t) => (
-            <Col xs={6} md={4} lg={3} key={t.id}>
+          {tracks.slice(0, 12).map((t, index) => (
+            <Col
+              xs={4}
+              md={3}
+              key={t.id}
+              className={index > 5 ? "d-none d-md-block" : ""}
+            >
               <SingleAlbum track={t} />
             </Col>
           ))}

@@ -33,13 +33,18 @@ const SingleAlbum = ({ track }) => {
             <Button
               variant={isFav ? "danger" : "outline-light"}
               size="sm"
+              className="p-1 d-flex align-items-center justify-content-center"
               onClick={() =>
                 isFav
                   ? dispatch(removeFavorite(track.id))
                   : dispatch(addFavorite(track))
               }
             >
-              {isFav ? "♥" : "♡"}
+              {isFav ? (
+                <i className="bi bi-heart-fill"></i>
+              ) : (
+                <i className="bi bi-heart"></i>
+              )}
             </Button>
           </Col>
         </Row>
