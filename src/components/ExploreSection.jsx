@@ -18,9 +18,11 @@ const ExploreSection = () => {
       <h4>Altro da esplorare</h4>
       <Row>
         {items.map((item, i) => (
-          <Col xs={12} md={6} lg={4} key={i}>
+          <Col xs={12} md={6} lg={4} key={i} className="p-2">
             <Card>
-              <span>{item}</span>
+              <Card.Text className="py-2 px-3 text-danger fw-semibold">
+                {item}
+              </Card.Text>
             </Card>
           </Col>
         ))}
