@@ -33,7 +33,7 @@ const SingleAlbum = ({ track }) => {
             <Button
               variant={isFav ? "danger" : "outline-light"}
               size="sm"
-              className="p-1 d-flex align-items-center justify-content-center"
+              className="p-1 d-flex align-items-center justify-content-center border-0"
               onClick={() =>
                 isFav
                   ? dispatch(removeFavorite(track.id))

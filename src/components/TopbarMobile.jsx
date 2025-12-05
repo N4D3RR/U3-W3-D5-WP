@@ -21,7 +21,10 @@ const TopBarMobile = () => {
 
         <Navbar.Brand className="text-light fw-semibold">Music</Navbar.Brand>
 
-        <Button size="sm" className="border-0 text-danger">
+        <Button
+          size="sm"
+          className="border-0 text-danger bg-transparent fw-semibold"
+        >
           Accedi
         </Button>
       </Navbar>
