@@ -10,7 +10,7 @@ const TopBarMobile = () => {
       <Navbar
         bg="black"
         variant="dark"
-        className="d-md-none px-3 py-2 border-bottom border-secondary justify-content-between"
+        className=" d-md-none px-3 py-2 border-bottom border-secondary justify-content-between"
       >
         <Button
           className="text-light fs-3 p-0 me-2 bg-black border-0"
